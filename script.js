@@ -5,6 +5,15 @@
 // You should reach to a point where you do assessment EVERYDAY!
 // You miss a 100% of shots that you dont take.
 
+var links = {
+    "Github": "https://github.com",
+    "LinkedIn": "https://www.linkedin.com/feed/",
+    "Youtube": "https://www.youtube.com",
+    "Insta": "https://www.instagram.com",
+    "Notion": "https://www.notion.so/Personal-Dashboard-9e4e324d581443caa4d4f50ac247cf52",
+    "ChatGPT": "https://chat.openai.com/",
+    "Calendar": "https://calendar.google.com/calendar/u/0/r"
+};
 
 // For Header
 // Updates the Greetings
@@ -57,15 +66,6 @@ updateTime();
 setInterval(updateTime, 1000);
 
 // For Search Bar
-var searchMapping = {
-    "github": "https://github.com",
-    "linkedin": "https://www.linkedin.com/feed/",
-    "yt": "https://www.youtube.com",
-    "twitter": "https://twitter.com",
-    "insta": "https://www.instagram.com"
-    // Add more search query and URL mappings as needed
-};
-
 document.getElementById("search-input").addEventListener("keyup", function (event) {
     if (event.key === "Enter") {
         var query = event.target.value.toLowerCase();
@@ -89,23 +89,17 @@ document.getElementById("search-input").addEventListener("blur", function (event
 
 
 // For Shortcuts
-
-
-// Function to handle the next button click event
-function onNextButtonClick() {
-    currentPage++;
-    displayLinks();
+for(var link in links) {
+    var linkDiv = document.createElement("div");
+    linkDiv.className = "link-item";
+    var linkElement = document.createElement("a");
+    linkElement.className = "link";
+    linkElement.href = links[link];
+    linkElement.target = "_blank";
+    linkElement.textContent = link;
+    linkDiv.appendChild(linkElement);
+    document.querySelector(".shortcut-links").appendChild(linkDiv);
 }
-
-// Attach the event listener to the next button
-// nextButton.addEventListener("click", onNextButtonClick);
-
-// Display the initial set of links
-// displayLinks();
-
-
-// Automatically advance to the next slide every 3 seconds
-// setInterval(nextSlide, 200);
 
 // Optionally, you can also add previous slide functionality
 function previousSlide() {

@@ -68,3 +68,28 @@ body {
 /********************/
 
 /* Shortcut Links */
+.shortcut-links {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    margin-top: 10px;
+}
+
+.link-item {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: rgb(70, 70, 70);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 7px;
+}
+
+a.link {
+    color: #fff;
+    text-decoration: none;
+    font-family: inherit;
+}
