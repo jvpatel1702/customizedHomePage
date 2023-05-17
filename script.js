@@ -12,7 +12,8 @@ var links = {
     "Insta": "https://www.instagram.com",
     "Notion": "https://www.notion.so/Personal-Dashboard-9e4e324d581443caa4d4f50ac247cf52",
     "ChatGPT": "https://chat.openai.com/",
-    "Calendar": "https://calendar.google.com/calendar/u/0/r"
+    "Calendar": "https://calendar.google.com/calendar/u/0/r",
+    "Google": "google.com
 };
 
 // For Header
